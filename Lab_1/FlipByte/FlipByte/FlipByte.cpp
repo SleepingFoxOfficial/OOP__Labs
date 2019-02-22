@@ -2,25 +2,22 @@
 
 using namespace std;
 
-namespace
+bool IsNumber(char * str)
 {
-	bool IsNumber(char * str)
+	for (int i = 0; i < strlen(str); ++i)
 	{
-		for (int i = 0; i < strlen(str); ++i)
-		{
-			if (!isdigit(str[i])) {
-				return false;
-			}
+		if (!isdigit(str[i])) {
+			return false;
 		}
-		return true;
 	}
+	return true;
+}
 
-	void FlipByte(uint8_t & byte)
-	{
-		byte = ((byte & 0b10101010) >> 1) | ((byte & 0b01010101) << 1);
-		byte = ((byte & 0b11001100) >> 2) | ((byte & 0b00110011) << 2);
-		byte = (byte << 4) | (byte >> 4);
-	}
+void FlipByte(uint8_t & byte)
+{
+	byte = ((byte & 0b10101010) >> 1) | ((byte & 0b01010101) << 1);
+	byte = ((byte & 0b11001100) >> 2) | ((byte & 0b00110011) << 2);
+	byte = (byte << 4) | (byte >> 4);
 }
 
 int main(int argc, char * argv[])
