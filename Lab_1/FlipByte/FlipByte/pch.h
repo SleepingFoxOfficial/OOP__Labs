@@ -3,5 +3,6 @@
 
 #include <iostream>
 #include <cctype>
+#include <string>
 
 #endif //PCH_H

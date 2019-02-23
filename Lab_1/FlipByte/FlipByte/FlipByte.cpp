@@ -2,7 +2,7 @@
 
 using namespace std;
 
-bool IsNumber(char * str)
+bool IsNumber(const char * str)
 {
 	for (int i = 0; i < strlen(str); ++i)
 	{
@@ -28,13 +28,13 @@ int main(int argc, char * argv[])
 		return 1;
 	}
 
-	if ((!IsNumber(argv[1])) || !((atoi(argv[1]) <= 255) && (atoi(argv[1]) >= 0)))
+	if ((!IsNumber(argv[1])) || !((stoi(argv[1]) <= 255) && (stoi(argv[1]) >= 0)))
 	{
 		cout << "Invalid value\n" << "<input byte> must be unsigned int(0 .. 255)\n";
 		return 1;
 	}
 
-	uint8_t byte = static_cast <uint8_t> (atoi(argv[1]));
+	uint8_t byte = static_cast <uint8_t> (stoi(argv[1]));
 
 	cout << "Input byte: " << argv[1] << endl;
 	FlipByte(byte);
