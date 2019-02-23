@@ -28,8 +28,6 @@ if ERRORLEVEL 1 goto err
 %PROGRAM% TestData\multiline.txt %PROGRAM% > %TEMP%\output.txt 
 if NOT ERRORLEVEL 1 goto err
 
-
-
 echo Program testing succeeded
 exit 0
 
