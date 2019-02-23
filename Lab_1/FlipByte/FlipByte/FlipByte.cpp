@@ -35,7 +35,6 @@ int main(int argc, char * argv[])
 	}
 
 	uint8_t byte = static_cast <uint8_t> (stoi(argv[1]));
-
 	cout << "Input byte: " << argv[1] << endl;
 	FlipByte(byte);
 	cout << "Output byte: " << static_cast <int> (byte) << endl;
