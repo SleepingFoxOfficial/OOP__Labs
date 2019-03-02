@@ -57,6 +57,7 @@ bool CopyFileWithReplacement(const std::string input, const std::string output, 
 		std::cout << "Failed to save data on disk\n";
 		return 1;
 	}
+	return 0;
 }
 
 int main(int argc, char* argv[])
@@ -66,6 +67,6 @@ int main(int argc, char* argv[])
 		std::cout << "Invalid argument count\n" << "Usage: replace.exe <inputFile> <outputFile> <searchString> <replacementString>\n";
 		return 1;
 	};
+	std::cout << argv[3];
 	return CopyFileWithReplacement(argv[1], argv[2], argv[3], argv[4]);
-	return 0;
 }
